@@ -1,7 +1,23 @@
-"""
-Aster MCP Server - Aster 期货 + 现货 MCP 服务
+import asyncio
+from aster_mcp.server import serve
 
-基于 Aster FAPI（期货）与 SAPI（现货）能力，为 AI Agent 提供行情、交易、账户等 MCP 工具。
-"""
+if __name__ == "__main__":
+    asyncio.run(serve())
+```
 
-__version__ = "0.1.0"
+**Commit changes.**
+
+---
+
+## If That Fails Too — Check `__init__.py` Fully
+
+Click on `aster_mcp/__init__.py` and share **everything** you see inside it — the full contents, not just the top part.
+
+Also tell me **every file** you see inside the `aster_mcp/` folder like:
+```
+__init__.py
+__main__.py
+server.py       ← exists?
+tools.py        ← exists?
+client.py       ← exists?
+config.py       ← exists?
