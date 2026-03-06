@@ -1,11 +1,11 @@
-FROM node:20
+FROM python:3.11
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY requirements.txt ./
 
-RUN npm install
+RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["node", "index.js"]
+CMD ["python", "-m", "aster_mcp"]
