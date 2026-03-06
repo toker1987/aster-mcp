@@ -1,5 +1,5 @@
-import asyncio
-from aster_mcp.simple_server import serve
+from aster_mcp.simple_server import SimpleAsterMCPServer
 
 if __name__ == "__main__":
-    asyncio.run(serve())
+    server = SimpleAsterMCPServer()
+    server.run(transport="sse")
